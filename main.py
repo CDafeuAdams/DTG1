@@ -31,3 +31,15 @@ def user_confirmation (list_of_random_items):
             return rando_list
         elif user_input == "N" or user_input == "n":
             rando_lists = your_day_trip(list_of_random_items[0],list_of_random_items[1],list_of_random_items[2],list_of_random_items[3])
+
+def day_trip_lists_run():
+    day_trip_lists = list_generator()
+    randomized_day_trip_lists = your_day_trip(day_trip_lists[0],day_trip_lists[1],day_trip_lists[2],day_trip_lists[3],)
+    randomized_day_trip_lists = user_confirmation(randomized_day_trip_lists)
+    print(f"Your destination is {randomized_day_trip_lists[0]} and you'll be eating at {randomized_day_trip_lists[1]}. You'll then take a {randomized_day_trip_lists[2]} to go {randomized_day_trip_lists[3]}.")
+
+
+
+
+
+day_trip_lists_run()
