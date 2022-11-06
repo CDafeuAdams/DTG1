@@ -19,3 +19,15 @@ def your_day_trip(tl_list, tr_list, trans_list, te_list):
     rando_trans = random.choice(trans_list)
     rando_tex_ent = random.choice(te_list)
     return [rando_tex_loc, rando_tex_res, rando_trans, rando_tex_ent]
+
+def user_confirmation (list_of_random_items):
+    rando_list = list_of_random_items
+    user_satisfied = False
+    while user_satisfied == False:
+        print(f"Your destination is {list_of_random_items[0]} and you'll be eating at {list_of_random_items[1]}. You'll then take a {list_of_random_items[2]} to go {list_of_random_items[3]}.")
+        user_input = input("Are you satisfied with the selections? Y/N")
+        if user_input == "Y" or user_input == "y":
+            user_satisfied == True
+            return rando_list
+        elif user_input == "N" or user_input == "n":
+            rando_lists = your_day_trip(list_of_random_items[0],list_of_random_items[1],list_of_random_items[2],list_of_random_items[3])
