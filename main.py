@@ -11,3 +11,11 @@ def list_generator():
     transportations = ["motorcycle", "horse", "car", "train", "monster truck", "SUV", "helicopter", "boat", "hot air balloon"]
     texas_entertainments = ["to the Rodeo", "Fishing", "to the Beach", "to Six Flags", "to the River Walk", "to the Space Center", "to the Natural Bridge Caverns", "to the Museum", "to the Van Gogh Exhibit", "to the Comedy Club", "to the Aquarium", "to the Zoo", "to the National Park"]
     return [texas_locations, texas_restaurants, transportations, texas_entertainments]
+
+
+def your_day_trip(tl_list, tr_list, trans_list, te_list):
+    rando_tex_loc = random.choice(tl_list)
+    rando_tex_res = random.choice(tr_list)
+    rando_trans = random.choice(trans_list)
+    rando_tex_ent = random.choice(te_list)
+    return [rando_tex_loc, rando_tex_res, rando_trans, rando_tex_ent]
