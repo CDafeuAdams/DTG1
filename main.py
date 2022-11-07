@@ -24,13 +24,17 @@ def user_confirmation (list_of_random_items):
     rando_list = list_of_random_items
     user_satisfied = False
     while user_satisfied == False:
-        print(f"Your destination is {list_of_random_items[0]} and you'll be eating at {list_of_random_items[1]}. You'll then take a {list_of_random_items[2]} to go {list_of_random_items[3]}.")
-        user_input = input("Are you satisfied with the selections? Y/N")
-        if user_input == "Y" or user_input == "y":
+        print(f"""Your destination is {list_of_random_items[0]} and you'll be eating at {list_of_random_items[1]}. 
+        You'll then take a {list_of_random_items[2]} to go {list_of_random_items[3]}.""")
+        user_input = input("Are you satisfied with the selections? Y or N")
+        if user_input == input("Y"):
             user_satisfied == True
-            return rando_list
-        elif user_input == "N" or user_input == "n":
-            rando_lists = your_day_trip(list_of_random_items[0],list_of_random_items[1],list_of_random_items[2],list_of_random_items[3])
+        elif user_input == input("N"):
+            rando_list = your_day_trip(list_of_random_items[0],list_of_random_items[1],list_of_random_items[2],list_of_random_items[3])
+        else: print(f"Have a great trip!")
+    return rando_list
+
+#I was following along with Pascal's DTG and as I started to change things around it printed my entire list, instead of randomly selecting one each of the different sections.
 
 def day_trip_lists_run():
     day_trip_lists = list_generator()
